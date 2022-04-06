@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class GtNN2chieu {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("nhập số dòng");
+        int dong=scanner.nextInt();
+        System.out.println("nhập số cột");
+        int cot =scanner.nextInt();
+        int [][] arr= new int[dong][cot];
+        for(int i=0;i< arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print("arr[" + i + "]["+ j + "] = ");
+                arr[i][j]=scanner.nextInt();
+            }
+        }
+        int min=arr[0][0];
+        for(int i=0;i< arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                if(arr[i][j]<min){
+                    min= arr[i][j];
+                }
+            }
+        }
+        System.out.println("giá trị nhỏ nhất= " +min);
+    }
+}
